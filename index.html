@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Play List</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .project-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            background: #f0f0f0;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: #555;
+        }
+
+        .github-link {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .github-button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .github-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎮 Project Play List</h1>
+            <p class="subtitle">재미있는 학습 앱과 프로젝트 모음</p>
+        </header>
+
+        <div class="projects-grid">
+            <a href="https://oyoso85.github.io/memory-block/" class="project-card" target="_blank">
+                <div class="project-icon">🧠</div>
+                <div class="project-title">Memory Block</div>
+                <div class="project-description">
+                    기억력을 테스트하는 재미있는 게임입니다. 블록 패턴을 기억하고 따라해보세요!
+                </div>
+                <div class="project-tags">
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Game</span>
+                    <span class="tag">Vite</span>
+                </div>
+            </a>
+
+            <a href="https://oyoso85.github.io/hangul-phonics/" class="project-card" target="_blank">
+                <div class="project-icon">🇰🇷</div>
+                <div class="project-title">Hangul Phonics</div>
+                <div class="project-description">
+                    한글 자음과 모음을 재미있게 배울 수 있는 교육 앱입니다.
+                </div>
+                <div class="project-tags">
+                    <span class="tag">React</span>
+                    <span class="tag">TypeScript</span>
+                    <span class="tag">Education</span>
+                </div>
+            </a>
+
+            <a href="https://oyoso85.github.io/english-phonics/" class="project-card" target="_blank">
+                <div class="project-icon">🔤</div>
+                <div class="project-title">English Phonics</div>
+                <div class="project-description">
+                    아동용 영어 파닉스 교육 프로그램으로 영어 발음을 쉽게 배울 수 있습니다.
+                </div>
+                <div class="project-tags">
+                    <span class="tag">React</span>
+                    <span class="tag">TypeScript</span>
+                    <span class="tag">Phonics</span>
+                </div>
+            </a>
+
+            <a href="https://oyoso85.github.io/number-block/" class="project-card" target="_blank">
+                <div class="project-icon">🔢</div>
+                <div class="project-title">Number Block</div>
+                <div class="project-description">
+                    숫자를 재미있게 배우고 연습할 수 있는 학습 도구입니다.
+                </div>
+                <div class="project-tags">
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">Math</span>
+                    <span class="tag">Education</span>
+                </div>
+            </a>
+
+            <a href="https://oyoso85.github.io/memory-block-app/" class="project-card" target="_blank">
+                <div class="project-icon">📱</div>
+                <div class="project-title">Memory Block App</div>
+                <div class="project-description">
+                    모바일 친화적인 메모리 게임 애플리케이션입니다.
+                </div>
+                <div class="project-tags">
+                    <span class="tag">Mobile</span>
+                    <span class="tag">PWA</span>
+                    <span class="tag">Game</span>
+                </div>
+            </a>
+
+            <a href="https://github.com/oyoso85/telegram-bot-server" class="project-card" target="_blank">
+                <div class="project-icon">🤖</div>
+                <div class="project-title">Telegram Bot Server</div>
+                <div class="project-description">
+                    텔레그램 봇 서버 프로젝트입니다.
+                </div>
+                <div class="project-tags">
+                    <span class="tag">Node.js</span>
+                    <span class="tag">Bot</span>
+                    <span class="tag">API</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="github-link">
+            <a href="https://github.com/oyoso85" class="github-button" target="_blank">
+                ⭐ GitHub에서 더 보기
+            </a>
+        </div>
+    </div>
+</body>
+</html>
