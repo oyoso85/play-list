@@ -24,15 +24,6 @@
 - [데모 보기](https://oyoso85.github.io/number-block/)
 - [GitHub 저장소](https://github.com/oyoso85/number-block)
 
-### 📱 Memory Block App
-모바일 친화적인 메모리 게임 애플리케이션
-- [데모 보기](https://oyoso85.github.io/memory-block-app/)
-- [GitHub 저장소](https://github.com/oyoso85/memory-block-app)
-
-### 🤖 Telegram Bot Server
-텔레그램 봇 서버 프로젝트
-- [GitHub 저장소](https://github.com/oyoso85/telegram-bot-server)
-
 ## 배포
 
 GitHub Pages를 통해 자동으로 배포됩니다.
@@ -46,4 +37,4 @@ python -m http.server 8000
 npx serve
 ```
 
-브라우저에서 `http://localhost:8000`으로 접속하세요.
+
